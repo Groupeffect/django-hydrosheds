@@ -132,7 +132,7 @@ Permissions default to ``IsAuthenticatedOrReadOnly``.
 
 
 Management Command 'geodata'
-============
+============================
 
 Download shapefiles from https://www.hydrosheds.org/products
 
