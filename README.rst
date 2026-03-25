@@ -121,15 +121,22 @@ The package ships with ``ModelViewSet`` views registered through a
 Permissions default to ``IsAuthenticatedOrReadOnly``.
 
 
-Loading Data
+Management Command 'geodata'
 ============
+
+Download shapefiles from https://www.hydrosheds.org/products
 
 Use the bundled management command to import shapefiles:
 
 .. code-block:: bash
-
+   # load data to database table
    python manage.py geodata -f path/to/HydroRIVERS_v10.shp -n HydroRiver --load
 
+   # print model classes and mappings
+   python manage.py geodata -f path/to/HydroRIVERS_v10.shp -n HydroRiver 
+
+   # print help
+   python manage.py geodata -h
 
 Configuration
 =============

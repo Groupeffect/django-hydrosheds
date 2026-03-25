@@ -132,7 +132,7 @@ wheels = [
 
 [[package]]
 name = "django-hydrosheds"
-version = "1.0.1"
+version = "1.0.0"
 source = { editable = "." }
 dependencies = [
     { name = "django" },
