@@ -116,17 +116,17 @@ The package ships with ``ModelViewSet`` views registered through a
 ``DefaultRouter``. Each endpoint supports **filtering**, **search**, and
 **ordering** out of the box via ``django-filter``.
 
-+---------------------+----------------------------+
-| Endpoint            | ViewSet                    |
-+=====================+============================+
-| ``/HydroLakePoint`` | ``HydroLakePointViewSet``  |
-+---------------------+----------------------------+
-| ``/HydroRiverLine`` | ``HydroRiverLineViewSet``  |
-+---------------------+----------------------------+
-| ``/HydroWastePoint``| ``HydroWastePointViewSet`` |
-+---------------------+----------------------------+
-| ``/HydroBasinPolygon``| ``HydroBasinViewSet``    |
-+---------------------+----------------------------+
++------------------------+----------------------------+
+| Endpoint               | ViewSet                    |
++========================+============================+
+| ``/HydroLakePoint``    | ``HydroLakePointViewSet``  |
++------------------------+----------------------------+
+| ``/HydroRiverLine``    | ``HydroRiverLineViewSet``  |
++------------------------+----------------------------+
+| ``/HydroWastePoint``   | ``HydroWastePointViewSet`` |
++------------------------+----------------------------+
+| ``/HydroBasinPolygon`` | ``HydroBasinViewSet``      |
++------------------------+----------------------------+
 
 Permissions default to ``IsAuthenticatedOrReadOnly``.
 
@@ -139,6 +139,7 @@ Download shapefiles from https://www.hydrosheds.org/products
 Use the bundled management command to import shapefiles:
 
 .. code-block:: bash
+
    # load data to database table
    python manage.py geodata -f path/to/HydroRIVERS_v10.shp -n HydroRiver --load
 
