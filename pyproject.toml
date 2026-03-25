@@ -6,7 +6,7 @@ requires = [
 
 [project]
 name = "django-hydrosheds"
-version = "1.0.1"
+version = "1.0.2"
 description = """django-hydrosheds is a Django application for handling hydrosheds data."""
 readme = "README.rst"
 keywords = [

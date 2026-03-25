@@ -83,13 +83,6 @@ class HydroRiverLineViewSet(viewsets.ModelViewSet):
         "endorheic",
         "dis_av_cms",
         "ord_stra",
-        "ord_max",
-        "ord_min",
-        "pfaf_id",
-        "pfaf_type",
-        "slope_100",
-        "pour_long",
-        "pour_lat",
     ]
     search_fields = [
         "hyriv_id",
@@ -103,13 +96,6 @@ class HydroRiverLineViewSet(viewsets.ModelViewSet):
         "endorheic",
         "dis_av_cms",
         "ord_stra",
-        "ord_max",
-        "ord_min",
-        "pfaf_id",
-        "pfaf_type",
-        "slope_100",
-        "pour_long",
-        "pour_lat",
     ]
     ordering_fields = [
         "hyriv_id",
@@ -123,13 +109,6 @@ class HydroRiverLineViewSet(viewsets.ModelViewSet):
         "endorheic",
         "dis_av_cms",
         "ord_stra",
-        "ord_max",
-        "ord_min",
-        "pfaf_id",
-        "pfaf_type",
-        "slope_100",
-        "pour_long",
-        "pour_lat",
     ]
 
     def get_queryset(self):
@@ -146,50 +125,12 @@ class HydroWastePointViewSet(viewsets.ModelViewSet):
     ]
     filterset_fields = [
         "waste_id",
-        "waste_name",
         "country",
-        "continent",
-        "poly_src",
-        "lake_type",
-        "grand_id",
-        "lake_area",
-        "shore_len",
-        "shore_dev",
-        "vol_total",
-        "vol_res",
-        "vol_src",
-        "depth_avg",
-        "dis_avg",
-        "res_time",
-        "elevation",
-        "slope_100",
-        "wshd_area",
-        "pour_long",
-        "pour_lat",
     ]
-    search_fields = ["waste_name", "country", "continent"]
+    search_fields = ["country"]
     ordering_fields = [
         "waste_id",
-        "waste_name",
         "country",
-        "continent",
-        "poly_src",
-        "lake_type",
-        "grand_id",
-        "lake_area",
-        "shore_len",
-        "shore_dev",
-        "vol_total",
-        "vol_res",
-        "vol_src",
-        "depth_avg",
-        "dis_avg",
-        "res_time",
-        "elevation",
-        "slope_100",
-        "wshd_area",
-        "pour_long",
-        "pour_lat",
     ]
 
     def get_queryset(self):
@@ -204,63 +145,9 @@ class HydroBasinViewSet(viewsets.ModelViewSet):
         filters.SearchFilter,
         filters.OrderingFilter,
     ]
-    filterset_fields = [
-        "basin_id",
-        "main_riv",
-        "length_km",
-        "dist_dn_km",
-        "dist_up_km",
-        "catch_skm",
-        "upland_skm",
-        "endorheic",
-        "dis_av_cms",
-        "ord_stra",
-        "ord_max",
-        "ord_min",
-        "pfaf_id",
-        "pfaf_type",
-        "slope_100",
-        "pour_long",
-        "pour_lat",
-    ]
-    search_fields = [
-        "basin_id",
-        "main_riv",
-        "length_km",
-        "dist_dn_km",
-        "dist_up_km",
-        "catch_skm",
-        "upland_skm",
-        "endorheic",
-        "dis_av_cms",
-        "ord_stra",
-        "ord_max",
-        "ord_min",
-        "pfaf_id",
-        "pfaf_type",
-        "slope_100",
-        "pour_long",
-        "pour_lat",
-    ]
-    ordering_fields = [
-        "basin_id",
-        "main_riv",
-        "length_km",
-        "dist_dn_km",
-        "dist_up_km",
-        "catch_skm",
-        "upland_skm",
-        "endorheic",
-        "dis_av_cms",
-        "ord_stra",
-        "ord_max",
-        "ord_min",
-        "pfaf_id",
-        "pfaf_type",
-        "slope_100",
-        "pour_long",
-        "pour_lat",
-    ]
+    filterset_fields = ["hybas_id"]
+    search_fields = ["hybas_id"]
+    ordering_fields = ["hybas_id"]
 
     def get_queryset(self):
         return self.serializer_class.Meta.model.objects.all()

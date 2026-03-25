@@ -2,16 +2,20 @@ from hydrosheds.db import core
 
 
 class HydroBasin(core.HydroBasinPolygon):
-    pass
+    class Meta:
+        app_label = "hydrosheds"
 
 
 class HydroRiver(core.HydroRiverLine):
-    pass
+    class Meta:
+        app_label = "hydrosheds"
 
 
 class HydroLake(core.HydroLakePoint):
-    pass
+    class Meta:
+        app_label = "hydrosheds"
 
 
 class HydroWaste(core.HydroWastePoint):
-    pass
+    class Meta:
+        app_label = "hydrosheds"
