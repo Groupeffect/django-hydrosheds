@@ -27,6 +27,16 @@ Runtime dependencies (installed automatically):
 - ``django-filter`` ≥ 25
 - ``djangorestframework`` ≥ 3.16
 
+Runtime dependencies available for spatialite:
+
+- ``libspatialite-dev`` (Debian/Ubuntu)
+- ``spatialite-devel`` (Fedora/CentOS)
+- ``libspatialite`` (macOS)
+- ``libgdal-dev`` (Debian/Ubuntu)
+- ``libgeos-dev`` (Debian/Ubuntu)
+- ``libproj-dev`` (Debian/Ubuntu)
+- ``libsqlite3-mod-spatialite`` (Debian/Ubuntu)
+- ``libopenblas-dev`` (Debian/Ubuntu)
 
 Installation
 ============
