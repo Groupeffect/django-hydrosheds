@@ -143,13 +143,6 @@ class TestHydroRiverLineViewSet(_ViewSetTestMixin, SimpleTestCase):
         "endorheic",
         "dis_av_cms",
         "ord_stra",
-        "ord_max",
-        "ord_min",
-        "pfaf_id",
-        "pfaf_type",
-        "slope_100",
-        "pour_long",
-        "pour_lat",
     ]
     expected_search_fields = [
         "hyriv_id",
@@ -163,13 +156,6 @@ class TestHydroRiverLineViewSet(_ViewSetTestMixin, SimpleTestCase):
         "endorheic",
         "dis_av_cms",
         "ord_stra",
-        "ord_max",
-        "ord_min",
-        "pfaf_id",
-        "pfaf_type",
-        "slope_100",
-        "pour_long",
-        "pour_lat",
     ]
     expected_ordering_fields = [
         "hyriv_id",
@@ -183,13 +169,6 @@ class TestHydroRiverLineViewSet(_ViewSetTestMixin, SimpleTestCase):
         "endorheic",
         "dis_av_cms",
         "ord_stra",
-        "ord_max",
-        "ord_min",
-        "pfaf_id",
-        "pfaf_type",
-        "slope_100",
-        "pour_long",
-        "pour_lat",
     ]
 
 
@@ -206,50 +185,12 @@ class TestHydroWastePointViewSet(_ViewSetTestMixin, SimpleTestCase):
     expected_model = models.HydroWaste
     expected_filterset_fields = [
         "waste_id",
-        "waste_name",
         "country",
-        "continent",
-        "poly_src",
-        "lake_type",
-        "grand_id",
-        "lake_area",
-        "shore_len",
-        "shore_dev",
-        "vol_total",
-        "vol_res",
-        "vol_src",
-        "depth_avg",
-        "dis_avg",
-        "res_time",
-        "elevation",
-        "slope_100",
-        "wshd_area",
-        "pour_long",
-        "pour_lat",
     ]
-    expected_search_fields = ["waste_name", "country", "continent"]
+    expected_search_fields = ["country"]
     expected_ordering_fields = [
         "waste_id",
-        "waste_name",
         "country",
-        "continent",
-        "poly_src",
-        "lake_type",
-        "grand_id",
-        "lake_area",
-        "shore_len",
-        "shore_dev",
-        "vol_total",
-        "vol_res",
-        "vol_src",
-        "depth_avg",
-        "dis_avg",
-        "res_time",
-        "elevation",
-        "slope_100",
-        "wshd_area",
-        "pour_long",
-        "pour_lat",
     ]
 
 
@@ -264,60 +205,6 @@ class TestHydroBasinViewSet(_ViewSetTestMixin, SimpleTestCase):
     viewset_class = views.HydroBasinViewSet
     expected_serializer = serializers.HydroBasinPolygonSerializer
     expected_model = models.HydroBasin
-    expected_filterset_fields = [
-        "basin_id",
-        "main_riv",
-        "length_km",
-        "dist_dn_km",
-        "dist_up_km",
-        "catch_skm",
-        "upland_skm",
-        "endorheic",
-        "dis_av_cms",
-        "ord_stra",
-        "ord_max",
-        "ord_min",
-        "pfaf_id",
-        "pfaf_type",
-        "slope_100",
-        "pour_long",
-        "pour_lat",
-    ]
-    expected_search_fields = [
-        "basin_id",
-        "main_riv",
-        "length_km",
-        "dist_dn_km",
-        "dist_up_km",
-        "catch_skm",
-        "upland_skm",
-        "endorheic",
-        "dis_av_cms",
-        "ord_stra",
-        "ord_max",
-        "ord_min",
-        "pfaf_id",
-        "pfaf_type",
-        "slope_100",
-        "pour_long",
-        "pour_lat",
-    ]
-    expected_ordering_fields = [
-        "basin_id",
-        "main_riv",
-        "length_km",
-        "dist_dn_km",
-        "dist_up_km",
-        "catch_skm",
-        "upland_skm",
-        "endorheic",
-        "dis_av_cms",
-        "ord_stra",
-        "ord_max",
-        "ord_min",
-        "pfaf_id",
-        "pfaf_type",
-        "slope_100",
-        "pour_long",
-        "pour_lat",
-    ]
+    expected_filterset_fields = ["hybas_id"]
+    expected_search_fields = ["hybas_id"]
+    expected_ordering_fields = ["hybas_id"]
