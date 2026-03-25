@@ -4,6 +4,7 @@ import os
 from django.contrib.gis.utils import LayerMapping
 from hydrosheds.db import models, core
 from django.utils.text import get_valid_filename
+from django.core.exceptions import ValidationError
 
 default_name = "ChangeMeModel"
 
