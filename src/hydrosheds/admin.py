@@ -3,7 +3,7 @@ from django.conf import settings
 
 
 def load_admin():
-    from hydrosheds.db import models
+    from hydrosheds import models
 
     admin.site.register(models.HydroLake)
     admin.site.register(models.HydroRiver)
@@ -11,29 +11,11 @@ def load_admin():
     admin.site.register(models.HydroBasin)
 
 
-if not hasattr(settings, "HYDROSHEDS_DISABLE_MODELS") and not hasattr(
-    settings, "HYDROSHEDS_DISABLE_ADMIN"
-):
-    load_admin()
-
-elif (
-    hasattr(settings, "HYDROSHEDS_DISABLE_MODELS")
-    and hasattr(settings, "HYDROSHEDS_DISABLE_ADMIN")
-    and settings.HYDROSHEDS_DISABLE_MODELS is False
-    and settings.HYDROSHEDS_DISABLE_ADMIN is False
-):
-    load_admin()
-
-elif (
+if (
     not hasattr(settings, "HYDROSHEDS_DISABLE_MODELS")
-    and hasattr(settings, "HYDROSHEDS_DISABLE_ADMIN")
-    and settings.HYDROSHEDS_DISABLE_ADMIN is False
-):
-    load_admin()
-
-elif (
-    hasattr(settings, "HYDROSHEDS_DISABLE_MODELS")
-    and settings.HYDROSHEDS_DISABLE_MODELS is False
-    and not hasattr(settings, "HYDROSHEDS_DISABLE_ADMIN")
+    or settings.HYDROSHEDS_DISABLE_MODELS is False
+) and (
+    not hasattr(settings, "HYDROSHEDS_DISABLE_ADMIN")
+    or settings.HYDROSHEDS_DISABLE_ADMIN is False
 ):
     load_admin()

@@ -94,17 +94,17 @@ All models live under ``hydrosheds.db`` and are backed by abstract base classes
 defined in ``hydrosheds.db.core``. Each field carries descriptive ``help_text``
 derived from the official HydroSHEDS technical documentation.
 
-+---------------------+-------------------------------------+-------------------+
-| Concrete Model      | Abstract Base (core)                | Geometry          |
-+=====================+=====================================+===================+
-| ``HydroLake``       | ``HydroLakePoint``                  | ``PointField``    |
-+---------------------+-------------------------------------+-------------------+
++---------------------+-------------------------------------+--------------------+
+| Concrete Model      | Abstract Base (core)                | Geometry           |
++=====================+=====================================+====================+
+| ``HydroLake``       | ``HydroLakePoint``                  | ``PointField``     |
++---------------------+-------------------------------------+--------------------+
 | ``HydroRiver``      | ``HydroRiverLine``                  | ``LineStringField``|
-+---------------------+-------------------------------------+-------------------+
-| ``HydroBasin``      | ``HydroBasinPolygon``               | ``MultiPolygon``  |
-+---------------------+-------------------------------------+-------------------+
-| ``HydroWaste``      | ``HydroWastePoint``                 | ``PointField``    |
-+---------------------+-------------------------------------+-------------------+
++---------------------+-------------------------------------+--------------------+
+| ``HydroBasin``      | ``HydroBasinPolygon``               | ``MultiPolygon``   |
++---------------------+-------------------------------------+--------------------+
+| ``HydroWaste``      | ``HydroWastePoint``                 | ``PointField``     |
++---------------------+-------------------------------------+--------------------+
 
 All geometry fields use **SRID 4326** (WGS 84).
 
@@ -147,6 +147,7 @@ Use the bundled management command to import shapefiles:
 
    # print help
    python manage.py geodata -h
+
 
 Configuration
 =============
